@@ -5,14 +5,14 @@
       "author": "Franz Joseph Haydn",
       "piece": "String Quartets, Op. 33 (The Joke)",
       "link": "music/Haydn_ String Quartet in E-Flat Major, Op. 33 No. 2 _The Joke__ IV. Finale. Presto.mp3",
-      "genre": "Symphony"
+      "genre": "Other"
     },
     {
       "era": "Classical Era",
       "author": "Wolfgang Amadeus Mozart",
       "piece": "Symphony no. 40 in G Minor, 1st movement",
       "link": "music/First Movement (Molto Allegro) From Symphony No. 40 in G Minor.mp3",
-      "genre": "Symphony"
+      "genre": "Other"
     },
     {
       "era": "Romantic Era",
@@ -26,7 +26,7 @@
       "author": "Hector Berlioz",
       "piece": "Symphonie Fantastique, 4th movement: March to the Scaffold",
       "link": "music/Berlioz Symphonie fantastique, H. 48 IV. Marche au supplice - Berliner Philharmoniker (128k).mp3",
-      "genre": "Symphony"
+      "genre": "Other"
     },
     {
       "era": "Romantic Era",
@@ -68,7 +68,7 @@
       "author": "Johannes Brahms",
       "piece": "Symphony no. 4 in E minor, 4th movement",
       "link": "music/Brahms Symphony No. 4 in E Minor, Op. 98 IV. Allegro energico e passionato - Berliner Philharmoniker (128k).mp3",
-      "genre": "Symphony"
+      "genre": "Other"
     },
     {
       "era": "Romantic Era",

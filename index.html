@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Webpage Examples</title>
+    <title>MUSIC100 Review</title>
     <style>
         body {
             font-family: system-ui, -apple-system, sans-serif;
@@ -108,21 +108,23 @@
             answerSection.style.borderRadius = '0 8px 8px 0';
             answerSection.style.borderLeft = '4px solid #376d9c';
 
-            answerSection.innerHTML = allCorrect ? 
+            let html = allCorrect ? 
                 '<h2 style="color: #4485be;">✅ Correct!</h2>' :
                 '<h2 style="color: #4485be;">❌ You Made Some Mistake!</h2>';
             
-            answerSection.innerHTML += `
+            html += `
                 <p><strong>Correct Answers:</strong></p>
                 <ul>
-                <li><strong>Piece:</strong> ${song.piece}</li>
-                <li><strong>Author:</strong> ${song.author}</li>
-                <li><strong>Era:</strong> ${song.era}</li>
-                <li><strong>Genre:</strong> ${song.genre}</li>
-                </ul>
+                    <li><strong>Piece:</strong> ${song.piece}</li>
+                    <li><strong>Author:</strong> ${song.author}</li>
+                    <li><strong>Era:</strong> ${song.era}</li>
             `;
-            
-            return answerSection;  // Return the element so caller decides where to put it
+            if (song.genre !== 'Other') html += `<li><strong>Genre:</strong> ${song.genre}</li>`;
+            html += '</ul>';
+
+            answerSection.innerHTML = html;  // Set once!
+
+            return answerSection;
         }
 
         function newquestion() {
@@ -306,31 +308,36 @@
                 question_section.appendChild(era_question);
 
                 // Genre question
-                let genre_question = document.createElement('div');
-                genre_question.innerHTML = "<h2>Genre: </h2>";
-                let genre_buttonlist = [];
-                for (let choice of choices_genres) {
-                    let choicebtn = document.createElement('button');
-                    choicebtn.textContent = choice;
-                    choicebtn.dataset.answer = playlist[musicid].genre;
-                    choicebtn.addEventListener('click', () => {
-                        if (choicebtn.clicked) return;   
-                        genre_buttonlist.forEach(btn => btn.clicked = true);
-                        if (!choicebtn.dataset.answer.includes(choicebtn.textContent)) {
-                            choicebtn.style.background = '#b85555';
-                            checkAnswered(false);
-                        } else {
-                            choicebtn.style.background = '#6aad5a';
-                            checkAnswered(true);
-                        }
-                    });
-                    genre_buttonlist.push(choicebtn);
+                if (playlist[musicid].genre !== 'Other'){
+                    let genre_question = document.createElement('div');
+                    genre_question.innerHTML = "<h2>Genre: </h2>";
+                    let genre_buttonlist = [];
+                    for (let choice of choices_genres) {
+                        let choicebtn = document.createElement('button');
+                        choicebtn.textContent = choice;
+                        choicebtn.dataset.answer = playlist[musicid].genre;
+                        choicebtn.addEventListener('click', () => {
+                            if (choicebtn.clicked) return;   
+                            genre_buttonlist.forEach(btn => btn.clicked = true);
+                            if (!choicebtn.dataset.answer.includes(choicebtn.textContent)) {
+                                choicebtn.style.background = '#b85555';
+                                checkAnswered(false);
+                            } else {
+                                choicebtn.style.background = '#6aad5a';
+                                checkAnswered(true);
+                            }
+                        });
+                        genre_buttonlist.push(choicebtn);
+                    }
+                    genre_buttonlist = shuffle(genre_buttonlist);
+                    for (let button of genre_buttonlist) {
+                        genre_question.appendChild(button);
+                    }
+                    question_section.appendChild(genre_question);
                 }
-                genre_buttonlist = shuffle(genre_buttonlist);
-                for (let button of genre_buttonlist) {
-                    genre_question.appendChild(button);
+                else {
+                    checkAnswered(true);
                 }
-                question_section.appendChild(genre_question);
 
                 content.appendChild(music_section);
                 content.appendChild(question_section);
