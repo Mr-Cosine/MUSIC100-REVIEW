@@ -1,0 +1,130 @@
+File checker · HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music File Path Checker</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        
+        h1 { color: #333; }
+        
+        .result {
+            padding: 12px 20px;
+            margin: 8px 0;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 14px;
+        }
+        
+        .ok {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            color: #155724;
+        }
+        
+        .fail {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            color: #721c24;
+        }
+        
+        .summary {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid #2196f3;
+        }
+        
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 Music File Path Checker</h1>
+    <p>This tool checks if all music files in your <code>musics.json</code> exist.</p>
+    
+    <button onclick="checkFiles()">Check All Files</button>
+    
+    <div id="results"></div>
+    
+    <script>
+        async function checkFiles() {
+            const results = document.getElementById('results');
+            results.innerHTML = '<p>Checking files...</p>';
+            
+            try {
+                const response = await fetch('musics.json');
+                const data = await response.json();
+                const playlist = data.music_pieces;
+                
+                let passed = 0;
+                let failed = 0;
+                let html = '';
+                
+                for (let i = 0; i < playlist.length; i++) {
+                    const song = playlist[i];
+                    const link = song.link;
+                    
+                    // Skip YouTube links
+                    if (link.startsWith('http')) {
+                        html += `<div class="result ok">✅ #${i} - ${song.author} - ${song.piece}<br>→ YouTube link (skipped): ${link}</div>`;
+                        passed++;
+                        continue;
+                    }
+                    
+                    // Check local file
+                    try {
+                        const fileResponse = await fetch(link, { method: 'HEAD' });
+                        if (fileResponse.ok) {
+                            html += `<div class="result ok">✅ #${i} - ${song.author} - ${song.piece}<br>→ Found: ${link}</div>`;
+                            passed++;
+                        } else {
+                            html += `<div class="result fail">❌ #${i} - ${song.author} - ${song.piece}<br>→ NOT FOUND: ${link}</div>`;
+                            failed++;
+                        }
+                    } catch (err) {
+                        html += `<div class="result fail">❌ #${i} - ${song.author} - ${song.piece}<br>→ NOT FOUND: ${link}</div>`;
+                        failed++;
+                    }
+                }
+                
+                // Summary
+                html += `
+                    <div class="summary">
+                        <h2>📊 Summary</h2>
+                        <p><strong>Total:</strong> ${playlist.length} pieces</p>
+                        <p style="color: #28a745;"><strong>✅ Found:</strong> ${passed}</p>
+                        <p style="color: #dc3545;"><strong>❌ Not Found:</strong> ${failed}</p>
+                        ${failed === 0 ? '<p style="font-size: 24px;">🎉 All files are correct!</p>' : '<p>⚠️ Fix the file paths marked in red above.</p>'}
+                    </div>
+                `;
+                
+                results.innerHTML = html;
+                
+            } catch (err) {
+                results.innerHTML = `<div class="result fail">❌ Could not load musics.json<br>Error: ${err.message}<br>Make sure this file is in the same folder as musics.json</div>`;
+            }
+        }
+    </script>
+</body>
+</html>

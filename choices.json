@@ -1,0 +1,51 @@
+{
+  "eras":
+  [
+    "Classical Era", 
+    "Romantic Era", 
+    "20th and 21st Centuries"
+  ],
+
+  "authors": 
+  [
+    "Haydn",
+    "Mozart",
+    "Schubert",
+    "Berlioz",
+    "Hensel",
+    "Chopin",
+    "Schumann",
+    "Verdi",
+    "Wagner",
+    "Brahms",
+    "Puccini",
+    "Debussy",
+    "Stravinsky",
+    "Schoenberg",
+    "Shostakovich",
+    "Copland",
+    "John Cage",
+    "Steve Reich",
+    "Arvo Pärt",
+    "Martin O'Donnell & Michael Salvatori"
+  ],
+
+  "genres":
+  [
+    "Symphony",
+    "Nocturne",
+    "Lied(song)/lieder",
+    "Opera: Italy",
+    "Opera: French",
+    "Opera: German",
+    "Impressionism",
+    "Primivitism",
+    "Neo-Classicism",
+    "Expressionism",
+    "Avant-garde",
+    "Electronic music",
+    "Post modernism",
+    "Minimalism",
+    "Other"
+  ]
+}

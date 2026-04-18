@@ -1,0 +1,144 @@
+{
+  "music_pieces": [
+    {
+      "era": "Classical Era",
+      "author": "Franz Joseph Haydn",
+      "piece": "String Quartets, Op. 33 (The Joke)",
+      "link": "music/Haydn_ String Quartet in E-Flat Major, Op. 33 No. 2 _The Joke__ IV. Finale. Presto.mp3",
+      "genre": "Symphony"
+    },
+    {
+      "era": "Classical Era",
+      "author": "Wolfgang Amadeus Mozart",
+      "piece": "Symphony no. 40 in G Minor, 1st movement",
+      "link": "music/First Movement (Molto Allegro) From Symphony No. 40 in G Minor.mp3",
+      "genre": "Symphony"
+    },
+    {
+      "era": "Romantic Era",
+      "author": "Franz Schubert",
+      "piece": "Die Forelle (The Trout)",
+      "link": "music/Die Forelle, Op. 32, D. 550.mp3",
+      "genre": "Lied(song)/lieder"
+    },
+    {
+      "era": "Romantic Era",
+      "author": "Hector Berlioz",
+      "piece": "Symphonie Fantastique, 4th movement: March to the Scaffold",
+      "link": "music/Berlioz Symphonie fantastique, H. 48 IV. Marche au supplice - Berliner Philharmoniker (128k).mp3",
+      "genre": "Symphony"
+    },
+    {
+      "era": "Romantic Era",
+      "author": "Fanny Mendelssohn Hensel",
+      "piece": "Lied from Songs Without Words",
+      "link": "music/Vier Lieder ohne Worte, op. 8 III. Lied larghetto - Elzbieta Sternlicht - Topic (128k).mp3",
+      "genre": "Lied(song)/lieder"
+    },
+    {
+      "era": "Romantic Era",
+      "author": "Fryderyk Chopin",
+      "piece": "Nocturne in E-flat Major",
+      "link": "music/Nocturne No. 2 in E-Flat Major, Op. 9 No. 2 - YundiMusic (128k).mp3",
+      "genre": "Nocturne"
+    },
+    {
+      "era": "Romantic Era",
+      "author": "Robert Schumann",
+      "piece": "Träumerei (Dreaming) from Kinderszenen",
+      "link": "music/Schumann Kinderszenen, Op. 15 VII. Träumerei - Vladimir Horowitz - Topic (128k).mp3",
+      "genre": "Other"
+    },
+    {
+      "era": "Romantic Era",
+      "author": "Giuseppe Verdi",
+      "piece": "Excerpt from Otello",
+      "link": "music/Verdi Otello Act 2 Era la notte...Si, pel ciel marmoreo giuro - Leo Nucci - Topic (128k).mp3",
+      "genre": "Opera: Italy"
+    },
+    {
+      "era": "Romantic Era",
+      "author": "Richard Wagner",
+      "piece": "The Ride of the Valkyries",
+      "link": "music/Ride of the Valkyries - Richard Wagner - Topic (128k).mp3",
+      "genre": "Opera: German"
+    },
+    {
+      "era": "Romantic Era",
+      "author": "Johannes Brahms",
+      "piece": "Symphony no. 4 in E minor, 4th movement",
+      "link": "music/Brahms Symphony No. 4 in E Minor, Op. 98 IV. Allegro energico e passionato - Berliner Philharmoniker (128k).mp3",
+      "genre": "Symphony"
+    },
+    {
+      "era": "Romantic Era",
+      "author": "Giacomo Puccini",
+      "piece": "Un bel dì (One fine day) from Madama Butterfly",
+      "link": "music/Puccini Madama Butterfly, SC 74, Act II Un bel dì vedremo - Renée Fleming (128k).mp3",
+      "genre": "Opera: Italy"
+    },
+    {
+      "era": "20th and 21st Centuries",
+      "author": "Claude Debussy",
+      "piece": "Prelude to the Afternoon of a Faun",
+      "link": "music/YTDown.com_YouTube_Debussy-Prelude-a-l-apres-midi-d-un-faun_Media_aCphwVnD_hM_008_128k.mp3",
+      "genre": "Impressionism"
+    },
+    {
+      "era": "20th and 21st Centuries",
+      "author": "Igor Stravinsky",
+      "piece": "The Augurs of Spring from The Rite of Spring",
+      "link": "music/YTDown.com_YouTube_Stravinsky-The-RIte-of-Spring-K015-Pt-1-_Media_lt3iu7Nr8l4_009_128k.mp3",
+      "genre": "Primivitism"
+    },
+    {
+      "era": "20th and 21st Centuries",
+      "author": "Arnold Schoenberg",
+      "piece": "Madonna from Pierrot Lunaire",
+      "link": "music/Schoenberg_ Pierrot Lunaire Op 21 Pt 1_ VI Madonna.mp3",
+      "genre": "Expressionism"
+    },
+    {
+      "era": "20th and 21st Centuries",
+      "author": "Dmitri Shostakovich",
+      "piece": "Waltz from Jazz Suite no. 2",
+      "link": "music/Shostakovich - Waltz No 2 _ Berlin Philharmonic Orchestra Waldbhne 2011.mp3",
+      "genre": "Other"
+    },
+    {
+      "era": "20th and 21st Centuries",
+      "author": "Aaron Copland",
+      "piece": "Excerpt from Appalachian Spring",
+      "link": "music/Appalachian Spring_ VII Doppio movimento.mp3",
+      "genre": "Other"
+    },
+    {
+      "era": "20th and 21st Centuries",
+      "author": "John Cage",
+      "piece": "Sonata V for prepared piano",
+      "link": "music/Sonata No 5.mp3",
+      "genre": "Avant-garde"
+    },
+    {
+      "era": "20th and 21st Centuries",
+      "author": "Steve Reich",
+      "piece": "Clapping Music",
+      "link": "music/Clapping Music.mp3",
+      "genre": "Minimalism"
+    },
+    {
+      "era": "20th and 21st Centuries",
+      "author": "Arvo Pärt",
+      "piece": "Spiegel im Spiegel (Mirror in a Mirror)",
+      "link": "music/Spiegel im Spiegel for Viola Piano.mp3",
+      "genre": "Minimalism"
+    },
+    {
+      "era": "20th and 21st Centuries",
+      "author": "Martin O'Donnell & Michael Salvatori",
+      "piece": "Main Theme from Halo: Combat Evolved",
+      "link": "music/Halo.mp3",
+      "genre": "Electronic music"
+    }
+  ]
+}
