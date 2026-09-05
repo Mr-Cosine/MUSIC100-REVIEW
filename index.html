@@ -76,6 +76,7 @@
         <button class="newquestion" onclick="newquestion()">Take A Question</button>
         <a href="filechecker.html">Check data file integrity</a>
     </div>
+    <script src="choice_generator.js"></script>
     <script>
         document.body.musicid = [];
         document.body.incorrect = [];
@@ -155,11 +156,9 @@
             let answeredCount = 0;
             let allCorrect = true;
             
-            Promise.all([
-                fetch('musics.json').then(r => r.json()),
-                fetch('choices.json').then(r => r.json())
-            ]).then(([musicData, choicesData]) => {
+            fetch('musics.json').then(r => r.json()).then((musicData) => {
                 const playlist = musicData.music_pieces;
+                const choicesData = generateChoices(playlist);
                 const choices_eras = choicesData.eras;
                 const choices_authors = choicesData.authors;
                 const choices_genres = choicesData.genres;
